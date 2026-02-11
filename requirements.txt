@@ -1,3 +1,4 @@
 gunicorn==24.1.1
 packaging==26.0
 Flask
+requests
