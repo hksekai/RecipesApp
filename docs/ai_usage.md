@@ -19,3 +19,8 @@ In order to satisfy the messaging queue requirement, I plan to also utilize the 
 
 ### 1/23/2026 - Setting up gitignore
 I am not familiar with Python, so I asked Cline whether it makes sense to commit and push my venv folder content and any folder named __pycache__. It suggested I do not do that and helped me to setup the gitignore file.
+
+### 2/18/2026 - Figure out how to use session in flask
+I want to be able to track a user by a unique session id that is generated on the fly (doesn't require user signin). I wasn't sure how it's done on flask so I checked with Gemini to see what options I have.
+I'm not moving to production yet so I'll use a simple secret key.
+![Session](img/session.png)
