@@ -107,6 +107,7 @@ def init_db(app):
 def get_or_create_user_session(session_id):
     """
     Get existing user session or create a new one.
+    No session expiries for now
     """
     user_session = UserSession.query.get(session_id)
     if not user_session:

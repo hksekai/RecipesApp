@@ -24,3 +24,13 @@ I am not familiar with Python, so I asked Cline whether it makes sense to commit
 I want to be able to track a user by a unique session id that is generated on the fly (doesn't require user signin). I wasn't sure how it's done on flask so I checked with Gemini to see what options I have.
 I'm not moving to production yet so I'll use a simple secret key.
 ![Session](img/session.png)
+
+
+### 2/20/2026 - Understanding how to use SQL in flask, starting from some boiler plate requests.
+Understand how to create a table, link tables as relationships.
+
+### 2/23/2026 - Fixing the procfile when Heroku deployments failed
+Somehow the heroku deployment started failing. I looked into the error logs and was not able to find the obvious root cause. Gemini was able to point me to the possible issue: The current Procfile uses `--pythonpath src` which adds `src` to the Python path, but your `app.py` uses __relative imports__ (`from .recipe_service import ...`), which requires `src` to be treated as a proper Python package.
+
+### 2/23/2026 - Added project rubric.md
+It was difficult to constantly go back to coursera to review the rubric so I used cline to generate the rubric.md based on the instructons from module 1.
