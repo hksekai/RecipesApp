@@ -1,7 +1,7 @@
 from flask import Flask, request, session
 from uuid import uuid4
 
-from .recipe_service import get_recipe_by_main_ingredient
+from .recipe_service import RecipeService
 from .models import (
     init_db,
     record_user_recipe_view,
@@ -53,7 +53,7 @@ def main():
 @app.route("/get_recipe", methods=["POST"])
 def echo_input():
     input_text = request.form.get("ingredient", "")
-    recipe_data = get_recipe_by_main_ingredient(input_text)
+    recipe_data = RecipeService.get_recipe_by_main_ingredient(input_text)
     
     if recipe_data:
         # Record this recipe view in the database
